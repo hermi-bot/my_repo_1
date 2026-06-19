@@ -1,0 +1,29 @@
+set mouse=a
+
+" --- Search ---
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" --- Colors ---
+syntax enable
+" colorscheme industry            " consistent across WSL/PowerShell/Ubuntu
+autocmd ColorScheme * highlight Search ctermbg=yellow ctermfg=black guibg=#ffff00 guifg=#000000
+
+set number                    " absolute line numbers
+" set cursorline                " highlight the current line
+filetype plugin indent on     " filetype-aware indenting/plugins
+
+" --- Space as leader + handy mappings ---
+let mapleader = " "           " set <Space> as the leader key
+
+nnoremap <leader>q :q<CR>     " space+q  → quit
+nnoremap <leader>w :w<CR>     " space+w  → save
+nnoremap <leader>x :x<CR>     " space+x  → save & quit
+nnoremap <leader>h :nohlsearch<CR>  " space+h → clear search highlight
+
+" Quick window navigation (space + h/j/k/l)
+nnoremap <leader><Left>  <C-w>h
+nnoremap <leader><Right> <C-w>l
+
