@@ -27,3 +27,9 @@ nnoremap <leader>h :nohlsearch<CR>  " space+h → clear search highlight
 nnoremap <leader><Left>  <C-w>h
 nnoremap <leader><Right> <C-w>l
 
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
