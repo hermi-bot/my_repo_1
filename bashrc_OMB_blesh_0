@@ -18,6 +18,7 @@ alias ls='eza --icons'
 alias la='eza --icons -a'
 alias l='eza --icons -l'
 alias ll='eza --icons -al'
+alias cat='batcat'
 
 OMB_DEFAULT_ALIASES="check"
 OMB_USE_SUDO=true
